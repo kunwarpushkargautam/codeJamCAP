@@ -1,0 +1,37 @@
+GET http://localhost:4004/v2/odata/v4/catalog/Books
+###
+POST http://localhost:4004/v2/odata/v4/catalog/Books
+content-type: application/json
+
+{ 
+    "ID": 3,
+    "title": "Harry Potter",
+    "stock": 250 
+}
+
+###
+GET http://localhost:4004/v2/odata/v4/catalog/Products(1)
+###
+POST http://localhost:4004/v2/odata/v4/catalog/Products(5)/checkPrice()
+content-type: application/json
+
+{
+"units":10
+}
+
+###
+POST http://localhost:4004/v2/odata/v4/catalog/Products(1)/order()
+content-type: application/json
+
+{
+"units":10,
+"developer":"Pushkar"
+}
+###
+GET http://localhost:4004/v2/odata/v4/catalog/Orders
+
+###
+GET http://localhost:4004/v2/odata/v4/catalog/OrderProducts
+
+###
+GET http://localhost:4004/v2/odata/v4/catalog/Orders(guid'd97b5fb5-9ba9-4aba-819d-c504eeecc526')"
